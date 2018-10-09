@@ -245,6 +245,39 @@ describe("Validator test suite", function() {
         expect(validator(schema, data).data).toEqual(['1337', '1337', 'foo']);
     });
 
+    it("validates number is required", function() {
+        var schema = {type: 'number', required: true};
+        expect(validator(schema, 1337).isValid).toBe(true);
+        expect(validator(schema).errors).toEqual({root: 'is required'});
+        expect(validator(schema).data).toEqual(undefined);
+    });
+
+    it("validates number type", function() {
+        expect(validator({type: 'number'}, '1337').errors).toEqual({ root: 'type must be number' });
+    });
+
+    it("handles number type", function() {
+        var res = validator({type: 'number'}, 1337.3);
+        expect(res.isValid).toBe(true);
+        expect(res.data).toEqual(1337.3);
+    });
+
+    it("validates boolean is required", function() {
+        var schema = {type: 'boolean', required: true};
+        expect(validator(schema, false).isValid).toBe(true);
+        expect(validator(schema).errors).toEqual({root: 'is required'});
+        expect(validator(schema).data).toEqual(undefined);
+    });
+
+    it("validates boolean type", function() {
+        expect(validator({type: 'boolean'}, null).errors).toEqual({ root: 'type must be boolean' });
+    });
+
+    it("handles boolean type", function() {
+        var res = validator({type: 'boolean'}, false);
+        expect(res.isValid).toBe(true);
+        expect(res.data).toEqual(false);
+    });
 
 });
 
