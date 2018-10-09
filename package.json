@@ -4,9 +4,14 @@
   "description": "A simple and extensible json schema validator",
   "main": "lib/validator.js",
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2",
     "jasmine": "^2.2"
   },
   "scripts": {
+    "build": "gulp",
     "test": "jasmine"
   },
   "repository": {
