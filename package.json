@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/nitely/tiny-json-validator/issues"
   },
-  "homepage": "https://github.com/nitely/tiny-json-validator"
+  "homepage": "https://github.com/nitely/tiny-json-validator",
+  "dependencies": {
+    "isobject": "^3.0.1"
+  }
 }
