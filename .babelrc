@@ -1,5 +1,5 @@
 {
     "presets": [
-        ["@babel/preset-env", {"useBuiltIns": "usage"}]
+        ["@babel/preset-env", { "debug": true, "useBuiltIns": "usage", "targets": { "esmodules": true, "edge": "21"}}]
     ]
 }

@@ -1,2 +1,4 @@
 android >= 4.4
+chrome >= 61
+edge >= 22
 ios >= 9.3.2

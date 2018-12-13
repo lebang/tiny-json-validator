@@ -1,8 +1,5 @@
 # Tiny JSON validator
 
-[![Build Status](https://img.shields.io/travis/nitely/tiny-json-validator/master.svg?style=flat-square)](https://travis-ci.org/nitely/tiny-json-validator)
-[![npm](https://img.shields.io/npm/v/tiny-json-validator.svg?style=flat-square)](https://www.npmjs.com/package/tiny-json-validator)
-
 A Node.js lib that has *less lines than this readme™*.
 
 It supports a tiny subset of the [json schema](http://json-schema.org/) specs. The main goal of this project is
@@ -13,7 +10,7 @@ Release versioning follows [SemVer](http://semver.org/).
 # Installation
 
 ```
-$ npm install tiny-json-validator
+$ npm install @mx/json-validator
 ```
 
 It is supported in all versions of [Node.js](https://nodejs.org) +4.2 without any flags.
@@ -23,7 +20,7 @@ It is supported in all versions of [Node.js](https://nodejs.org) +4.2 without an
 ```javascript
 "use strict";
 
-let validator = require('tiny-json-validator');
+let validator = require('@mx/json-validator');
 
 
 let book_schema = {
@@ -87,10 +84,6 @@ res.data
 ```
 $ npm run test
 ```
-
-# Changelog
-
-[changelog](https://github.com/nitely/tiny-json-validator/blob/master/CHANGES.md)
 
 ## License
 

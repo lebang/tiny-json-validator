@@ -1,8 +1,8 @@
 {
-  "name": "tiny-json-validator",
-  "version": "2.0.0",
+  "name": "@mx/json-validator",
+  "version": "1.0.0",
   "description": "A simple and extensible json schema validator",
-  "main": "lib/validator.js",
+  "main": "dist/validator.js",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "jasmine"
+    "test": "jasmine",
+    "release": "npm run test && npm run build && mnpm publish"
   },
   "repository": {
     "type": "git",
